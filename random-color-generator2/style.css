@@ -1,0 +1,19 @@
+.main-container{
+    width: 20%;
+    border: 1px solid black;
+    padding: 1% 5% 3% 5% ;
+    margin-top: 15%;
+    margin-left: 33%;
+    background-color: azure;
+    border-radius: 1%;
+}
+button{
+    background: linear-gradient(118deg, #42cff2, #4a66f3);
+    padding: 3% 5%;
+    margin-bottom: 0.8%;
+    font-size: larger;
+}
+button:hover{
+    color:antiquewhite;
+}
+

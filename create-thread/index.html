@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom manipulation</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="container">
+		<!-- Start your code from here -->
+		<section  id="textcontent">
+			<div  id="hero-unit">
+			  <div id="headings">
+				<h2>Character :</h2>
+				<h2 id="charcount">0</h2>
+				<h2 id="threadsHeading">Threads :</h2>
+				<h2 id="threadcount">0</h2>
+			  </div>
+	
+			  <textarea placeholder="thread count is 275" required autofocus onkeyup="count()" id="textInput"> </textarea>
+			  <p id="error">Please enter some content</p>
+			  <button id="btn" type="submit">Threads</button>
+			</div>
+		  </section>
+		  
+	
+		  <section id="threads">
+			<p>Your threads will appear here</p>
+			<br />
+			<p>The character limit for each thread count is 275</p>
+	
+		  </section>
+		</div>
+    </body>	
+	
+		<!-- End your code -->
+	
+		<script type="text/javascript">
+		// write your javascript code here
+		const btn = document.getElementById("btn");
+	const thread = document.getElementById("threads");
+	const textinput = document.getElementById("textInput");
+	const threadcount = document.getElementById('threadcount')
+	const p = document.querySelectorAll('p')
+	const size = 275
+	
+	function count() {
+	
+	  document.getElementById("charcount").innerHTML = textinput.value.length;
+	  threadcount.innerHTML=Math.ceil(textinput.value.length/size)
+	}
+	
+	btn.addEventListener("click", function () {
+		let count = parseInt(document.getElementById('charcount').innerHTML);
+	
+		thread.style.background= 'transparent';
+		p.forEach((item)=> {
+			item.style.display='none'
+		})
+	
+		for (x=0 ; x<count ; x++){
+			if (x%275===0){
+	
+				let div =document.createElement('div')
+				div.classList='sample'
+				div.innerHTML = textinput.value.slice(x,x+275)
+				thread.appendChild(div)
+	
+				let a = document.createElement('a')
+				a.className='anchor'
+				a.innerHTML='X'
+				div.appendChild(a)
+			}
+		}
+	
+	});
+		</script>
+	<!-- End your code -->
+
+	</div>
+<script>
+/* DO NOT EDIT THIS CODE- WRITTERN TO PREVENT CSS CACHING */	  
+	// Get HTML head element
+	var head = document.getElementsByTagName('HEAD')[0]; 
+	// Create new link Element
+	var link = document.createElement('link');
+	// set the attributes for link element 
+	link.rel = 'stylesheet'; 
+	link.type = 'text/css';
+	link.href = './style.css?v='+ new Date().getTime(); 
+	// Append link element to HTML head
+	head.appendChild(link); 
+	/* DO NOT EDIT THIS CODE- WRITTERN TO PREVENT CSS CACHING */	  
+</script> 
+</html>

@@ -1,0 +1,113 @@
+body{
+    height: 10rem;
+    background-image: linear-gradient(to right, red , yellow);
+    }
+    * {
+        padding: 0;
+        margin: 0;
+      }
+      #textcontent {
+        position: absolute;
+        left: 10vw;
+        width: 50vw;
+        height: 110vh;
+        overflow-y: hidden;
+        margin-top: -5%;
+      }
+      #hero-unit {
+        position: relative;
+        width: 500px;
+        height:600px;
+        background: white;
+        margin-top: 100px;
+        margin-left: 100px;
+        border-radius: 10px;
+      }
+      #error{
+        position: absolute;
+        top: 55vh;
+        left: 8vw;
+        font-size: x-large;
+        color: red;
+        display: none;
+      }
+      #headings {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 100px;
+        padding: 20px;
+    
+      }
+      #charcount {
+        margin-right: 20px;
+      }
+      #textInput {
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+      }
+      #btn {
+        position: absolute;
+        bottom: 20px;
+        padding: 15px;
+        width: 300px;
+        left: 100px;
+        border-radius: 35px;
+        background: linear-gradient(118deg, #42cff2, #4a66f3);
+        color: white;
+        font-size: x-large;
+      }
+      #threads {
+        position: absolute;
+        width: 25vw;
+        height: 90vh;
+        left: 60vw;
+        background: white;
+        top: 5vh;
+        border-radius: 10px;
+        font-size: larger;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      #threads p {
+    
+        padding: 20px;
+        width: 20vw;
+    
+    
+      }
+      .sample{
+        position: relative;
+        width: 20vw;
+        background: white;
+        margin: auto;
+        border-radius: 10px;
+        /* border: 2px solid black; */
+        margin: auto;
+        margin-bottom: 30px;
+        word-wrap: break-word;
+        min-height: 200px;
+      }
+      .countdiv{
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        background: lightblue;
+        color: white;
+        font-size: x-large;
+      }
+      .anchor{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        cursor: pointer;
+      } 
