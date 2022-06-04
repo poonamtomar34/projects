@@ -1,13 +1,26 @@
+
+// function requestApi(city){
+//     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e9fca73f1be298d87e28473e7c015d77`;
+//     fetchData();
+// }
+
+// function onSuccess(position){
+//     const {latitude, longitude} = position.coords;
+//     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=e9fca73f1be298d87e28473e7c015d77`;
+//     fetchData();
+// }
+//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
 let weather = (function () {
 
-    
+    // I don't like writing document.querySelector again & again
     let $ = selector => document.querySelector(selector);
     const searchbox = $(`.search-box`);
 
-    
+    // later we'll manipulate these values
     const api = {
         key: "e9fca73f1be298d87e28473e7c015d77",
-        base: "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/"
+        base: "https://api.openweathermap.org/data/2.5/"
     }
 
     async function getWeather (query) {
