@@ -1,10 +1,10 @@
 let weather = (function () {
 
-    // I don't like writing document.querySelector again & again
+    
     let $ = selector => document.querySelector(selector);
     const searchbox = $(`.search-box`);
 
-    // later we'll manipulate these values
+    
     const api = {
         key: "e9fca73f1be298d87e28473e7c015d77",
         base: "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/"
